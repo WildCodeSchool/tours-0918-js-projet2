@@ -1,0 +1,15 @@
+<div class="card-group">
+
+  <div class="card m-2" *ngFor="let media of medias" style="width: 18rem;">
+
+    <img class="card-img-top" [src]="media.post_url">
+
+    <div class="card-body">
+      <h5 class="card-title">{{media.author}}</h5>
+      <p class="card-text">{{media.filename}}</p>
+      <a href="#" class="btn btn-primary">Open</a>
+    </div>
+
+  </div>
+
+</div>
