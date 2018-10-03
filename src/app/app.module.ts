@@ -4,12 +4,12 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,
