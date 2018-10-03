@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-gallery',
@@ -8,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class GalleryComponent implements OnInit {
   medias: any;
 
-  constructor() { }
+  constructor(private service: NgbModal) {
+
+  }
+
+  openMedia(content: any) {
+    this.service.open(content).result
+
+    .then(resultat => {
+        console.log(resultat);
+    })
+
+    .catch(error => {
+        console.log(error);
+    });
+  }
 
   ngOnInit() {
     this.medias = [

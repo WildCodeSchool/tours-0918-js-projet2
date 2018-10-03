@@ -2,14 +2,19 @@
 
   <div class="card m-2" *ngFor="let media of medias" style="width: 18rem;">
 
-    <img class="card-img-top" [src]="media.post_url">
+    <img class="card-img-top" [src]="media.post_url" (click)="openMedia(content)">
 
     <div class="card-body">
       <h5 class="card-title">{{media.author}}</h5>
       <p class="card-text">{{media.filename}}</p>
-      <a href="#" class="btn btn-primary">Open</a>
+      <a href="#" class="btn btn-primary" (click)="openMedia(content)">Open</a>
     </div>
 
+    <ng-template #content let-modal>
+      <app-modal [mediaInput]="media" [modalInput]="modal"></app-modal>
+    </ng-template>
+    
   </div>
 
 </div>
+
